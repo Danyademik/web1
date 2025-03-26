@@ -91,12 +91,12 @@ h1 {
 }
 
 #taskList li.completed {
-    background-color: #e8f5e9; /* Зелений фон для виконаних завдань */
+    background-color: #e8f5e9;
     border-color: #c8e6c9;
 }
 
 #taskList li.completed .task-text {
-    text-decoration: line-through; /* Закреслений текст для виконаних завдань */
+    text-decoration: line-through; 
     color: #888;
 }
 
