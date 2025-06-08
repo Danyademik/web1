@@ -1,0 +1,68 @@
+// Добавляем импорт переменных
+
+.upgrades {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px; // Используем переменную
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Исправлено с $shadow на $box-shadow
+  margin: 20px 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px); // Добавляем эффект матового стекла
+
+  h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.upgradeButton {
+  background: #4cc9f0;
+  color: white;
+  border: none;
+  padding: 12px 15px; // Увеличили padding для лучшего UX
+  margin: 8px 0;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; // Для иконок если будут
+
+  &:hover {
+    background: dark(#4cc9f0, 10%); // Исправлена функция dark()
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+// Основные переменные
+$border-radius: 12px;
+$box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+$border-color: rgba(255, 255, 255, 0.15);
+$text-color: #ffffff;
+
+// Цвета
+$secondary-color: #4cc9f0;
+$disabled-color: #6c757d;
+
+// Эффекты
+$transition: all 0.3s ease;

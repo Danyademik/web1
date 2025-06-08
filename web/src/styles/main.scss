@@ -1,0 +1,30 @@
+@use './variables' as *;
+
+body {
+  font-family: $font-stack;
+  background-color: $bg-color;
+  color: $text-color;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.stats {
+  background: $card-bg;
+  padding: 15px;
+  border-radius: $border-radius;
+  margin-top: 20px;
+  box-shadow: $shadow;
+  border: 1px solid $border-color;
+
+  p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+  }
+}

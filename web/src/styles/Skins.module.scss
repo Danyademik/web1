@@ -1,0 +1,81 @@
+.skins {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+  h3 {
+    color: #4cc9f0;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .skin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+
+  .skin-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+
+    &:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    &.active {
+      border-color: #4cc9f0;
+      box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.3);
+    }
+
+    &.locked {
+      position: relative;
+      opacity: 0.6;
+      filter: grayscale(70%);
+
+      &::after {
+        content: "🔒";
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 1.2rem;
+      }
+    }
+
+    .skin-name {
+      font-weight: 500;
+      margin: 8px 0 4px;
+      color: white;
+    }
+
+    .skin-price {
+      color: #f72585;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+  }
+
+  .skin-preview {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background: var(--skin-preview-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+}
