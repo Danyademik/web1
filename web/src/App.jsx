@@ -20,7 +20,7 @@ export default function App() {
   } = useClicker();
 
   const [prestige, setPrestige] = useState({
-    //level: 0,
+    level: 0,
     dulkcoins: 500
   });
 
